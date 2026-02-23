@@ -328,7 +328,7 @@ function ThemeToggle({ isDark, onToggle }) {
 
 export default function VipassanaApp() {
   const [isDark, setIsDark] = useState(false);
-  const [langFilter, setLangFilter] = useState("all");
+  const [langFilter, setLangFilter] = useState("en");
   const [instructionFilter, setInstructionFilter] = useState("all");
   const [mettaFilter, setMettaFilter] = useState("all");
   const [activeTrack, setActiveTrack] = useState(null);
@@ -407,10 +407,10 @@ export default function VipassanaApp() {
 
       <div
         style={{
-          maxWidth: 640,
+          maxWidth: 960,
+          width: "100%",
           margin: "0 auto",
-          padding: "3rem 1.5rem 10rem",
-          minHeight: "100vh",
+          padding: "3rem 2.5rem 9rem",
         }}
       >
         {/* Header */}
@@ -458,9 +458,9 @@ export default function VipassanaApp() {
               Language
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <FilterPill label="All" active={langFilter === "all"} onClick={() => setLangFilter("all")} />
+              {/* <FilterPill label="All" active={langFilter === "all"} onClick={() => setLangFilter("all")} /> */}
               <FilterPill label="English" active={langFilter === "en"} onClick={() => setLangFilter("en")} />
-              <FilterPill label="English + 한국어" active={langFilter === "en-ko"} onClick={() => setLangFilter("en-ko")} />
+              {/* <FilterPill label="English + 한국어" active={langFilter === "en-ko"} onClick={() => setLangFilter("en-ko")} /> */}
             </div>
           </div>
 
