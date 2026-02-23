@@ -1,4 +1,4 @@
-"use client";
+import "./globals.css";
 
 export const metadata = {
   title: "Vercel Ready App",
@@ -13,4 +13,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

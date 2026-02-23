@@ -1,7 +1,6 @@
 "use client";
 
-import "./globals.css";
-import VipassanaApp from "./VipassanaApp";
+import VipassanaApp from "../VipassanaApp";
 
 export default function Page() {
   return (
@@ -10,4 +9,3 @@ export default function Page() {
     </main>
   );
 }
-
