@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Vercel Ready App",
-  description: "Minimal Next.js shell for your JSX UI",
+  title: "Vipassana Group Meditation App",
+  description: "Making Vipassana meditation accessible with guided tracks with multiple languages and styles.",
 };
 
 export default function RootLayout({ children }) {
