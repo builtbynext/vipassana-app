@@ -328,7 +328,7 @@ function ThemeToggle({ isDark, onToggle }) {
 
 export default function VipassanaApp() {
   const [isDark, setIsDark] = useState(false);
-  const [langFilter, setLangFilter] = useState("en");
+  const [langFilter, setLangFilter] = useState("all");
   const [instructionFilter, setInstructionFilter] = useState("all");
   const [mettaFilter, setMettaFilter] = useState("all");
   const [activeTrack, setActiveTrack] = useState(null);
@@ -344,6 +344,12 @@ export default function VipassanaApp() {
   });
 
   const playTrack = (track) => {
+    // Check if audioUrl is a Zoom link
+    const isZoom = typeof track.audioUrl === "string" && track.audioUrl.startsWith("https://us04web.zoom.us/");
+    if (isZoom) {
+      window.open(track.audioUrl, "_blank");
+      return;
+    }
     setActiveTrack(track);
     setIsPlaying(true);
     if (audioRef.current) {
@@ -458,9 +464,9 @@ export default function VipassanaApp() {
               Language
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              {/* <FilterPill label="All" active={langFilter === "all"} onClick={() => setLangFilter("all")} /> */}
+              <FilterPill label="All" active={langFilter === "all"} onClick={() => setLangFilter("all")} />
               <FilterPill label="English" active={langFilter === "en"} onClick={() => setLangFilter("en")} />
-              {/* <FilterPill label="English + 한국어" active={langFilter === "en-ko"} onClick={() => setLangFilter("en-ko")} /> */}
+              <FilterPill label="English + 한국어" active={langFilter === "en-ko"} onClick={() => setLangFilter("en-ko")} />
             </div>
           </div>
 
