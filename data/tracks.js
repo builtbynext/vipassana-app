@@ -1,6 +1,17 @@
 export const TRACKS = [
   {
     id: 1,
+    title: "Virtual Group Sitting (Korean)",
+    language: "en-ko",
+    languageLabel: "English + 한국어",
+    instruction: "full",
+    hasMetta: true,
+    duration: "60:00",
+    audioUrl: "https://us04web.zoom.us/j/2173123040?pwd=0000",
+    description: "Use Zoom Passcode: 0000 – 6am & 9pm KST / 5am & 8pm SGT Daily",
+  },
+  {
+    id: 2,
     title: "Full Guidance — with Mettā",
     language: "en",
     languageLabel: "English",
@@ -11,7 +22,7 @@ export const TRACKS = [
     description: "Complete instruction with full guidance + Metta",
   },
   {
-    id: 2,
+    id: 3,
     title: "Shorter Guidance — with Mettā",
     language: "en",
     languageLabel: "English",
@@ -20,17 +31,6 @@ export const TRACKS = [
     duration: "60:03",
     audioUrl: "/audio/cosmic-english-light.mp3",
     description: "Complete instruction with minimal guidance + Metta",
-  },
-  {
-    id: 3,
-    title: "Virtual Group Sitting (Korean)",
-    language: "en-ko",
-    languageLabel: "English + 한국어",
-    instruction: "full",
-    hasMetta: true,
-    duration: "60:00",
-    audioUrl: "https://us04web.zoom.us/j/2173123040?pwd=0000",
-    description: "Use Zoom Passcode: 0000 - Daily 8am KST / 7pm KST",
   },
   // {
   //   id: 4,
